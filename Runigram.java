@@ -10,15 +10,15 @@ public class Runigram {
 		//// Hide / change / add to the testing code below, as needed.
 		
 		// Tests the reading and printing of an image:	
-		// Color[][] tinypic = read("tinypic.ppm");
+		Color[][] tinypic = read("eyes.ppm");
 		// print(tinypic);
 
 		// Creates an image which will be the result of various 
 		// // // image processing operations:
-		// Color[][] imageOut;
+		Color[][] imageOut;
 
 		// // // Tests the horizontal flipping of an image:
-		// // imageOut = flippedHorizontally(tinypic);
+		imageOut = flippedHorizontally(tinypic);
 		// // imageOut = flippedVertically(tinypic);
 		// // imageOut = scaled(tinypic, 3,5);
 		// System.out.println(blend(new Color(100,40,100) , new Color(200,20,40), 0.25));
@@ -29,7 +29,7 @@ public class Runigram {
 		// display(thor);
 
 		// System.out.println();
-		// print(imageOut);
+		print(imageOut);
 		
 		// System.out.println(luminance(new Color(255,0,255)));
 
@@ -52,8 +52,8 @@ public class Runigram {
 		int r = 0;
 		int g = 0;
 		int b = 0;
-		for (int i = 0; i < image.length; i++) {
-			for (int j = 0; j < image[i].length; j++) {
+		for (int i = 0; i < numRows; i++) {
+			for (int j = 0; j < numCols; j++) {
 				r = in.readInt();
 				g = in.readInt();
 				b = in.readInt();
@@ -99,9 +99,9 @@ public class Runigram {
 		int rows =image.length;
 		int cols = image[1].length;
 		Color[][] imageFlipped = new Color[rows][cols];
-		for (int i = 0; i < imageFlipped.length; i++) {
-			for (int j = 0; j < imageFlipped[i].length; j++) {
-				imageFlipped[i][j]=image[i][image[j].length-1-j];
+		for (int i = 0; i < rows; i++) {
+			for (int j = 0; j < cols; j++) {
+				imageFlipped[i][j]=image[i][image[i].length-1-j];
 			}
 		}
 		//// Replace the following statement with your code
