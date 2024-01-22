@@ -14,19 +14,19 @@ public class Runigram {
 		// print(tinypic);
 
 		// Creates an image which will be the result of various 
-		// // image processing operations:
-		Color[][] imageOut;
+		// // // image processing operations:
+		// Color[][] imageOut;
 
-		// // Tests the horizontal flipping of an image:
-		// imageOut = flippedHorizontally(tinypic);
-		// imageOut = flippedVertically(tinypic);
-		// imageOut = scaled(tinypic, 3,5);
-		System.out.println(blend(new Color(100,40,100) , new Color(200,20,40), 0.25));
+		// // // Tests the horizontal flipping of an image:
+		// // imageOut = flippedHorizontally(tinypic);
+		// // imageOut = flippedVertically(tinypic);
+		// // imageOut = scaled(tinypic, 3,5);
+		// System.out.println(blend(new Color(100,40,100) , new Color(200,20,40), 0.25));
 
-		Color[][] thor = read("thor.ppm");
-		Color[][] xmen = read("xmen.ppm");
-		// morph(xmen, thor, 3);
-		display(thor);
+		// Color[][] thor = read("thor.ppm");
+		// Color[][] xmen = read("xmen.ppm");
+		// // morph(xmen, thor, 3);
+		// display(thor);
 
 		// System.out.println();
 		// print(imageOut);
